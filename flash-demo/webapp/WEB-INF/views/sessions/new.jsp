@@ -1,1 +1,0 @@
-<jsp:include page="/WEB-INF/views/themes/${theme}/login.jsp"/>
