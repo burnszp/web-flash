@@ -11,7 +11,6 @@
     <modules>
         <module>flash-core</module>
         <module>flash-web</module>
-        <module>flash-demo</module>
         <module>flash-generator</module>
     </modules>
     <properties>
