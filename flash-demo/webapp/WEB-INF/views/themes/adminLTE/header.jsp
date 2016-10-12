@@ -30,7 +30,7 @@
 	<!-- Main Header -->
 	<header class="main-header">
 		<!-- Logo -->
-		<a href="/" class="logo"><b>库存管理系统${title}</b></a>
+		<a href="/" class="logo"><b>后台管理系统${title}</b></a>
 		<!-- Header Navbar -->
 		<nav class="navbar navbar-static-top">
 			<!-- Sidebar toggle button-->
