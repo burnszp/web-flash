@@ -2,8 +2,7 @@
 <%@ page language="java" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://displaytag.sf.net" prefix="display"%>
-<%@taglib prefix="z" uri="http://taglib.enilu.com"%>
-
+<%@taglib prefix="z" uri="http://taglib.enilu.cn"%>
 <z:breadcrumb breadcrumb="${breadcrumb}"/>
 <table class="table table-striped table-bordered">
 	<tr><td>ID</td><td><z:h value="${user.id}"/></td></tr>

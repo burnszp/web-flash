@@ -46,7 +46,7 @@
 
 <div class="login-box">
     <div class="login-logo">
-        <b style="color: white">库存管理系统</b>
+        <b style="color: white">后台管理系统</b>
     </div><!-- /.login-logo -->
     <div class="login-box-body">
         <div class="box-header">

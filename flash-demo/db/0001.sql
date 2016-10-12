@@ -8,6 +8,6 @@ create table user(
   updated_at timestamp not null default current_timestamp on update current_timestamp,
   created_at timestamp not null,
   unique key uk_user_name(name)
-) engine=innodb default charset=utf8 comment 'fake_columns: password:string';
+) engine=innodb default charset=utf8 comment 'label用户';
 
-insert into user set name = 'admin', email='zzzhc.cn@gmail.com', salt='27ad28b980affe8c453e4f65fadcba45624b6a01', crypted_password='a96cdd2daff763cbab9028f2730d83a6cd5ddb93', created_at = now();
+insert into user set name = 'admin', email='eniluzt@qq.com', salt='27ad28b980affe8c453e4f65fadcba45624b6a01', crypted_password='a96cdd2daff763cbab9028f2730d83a6cd5ddb93', created_at = now();

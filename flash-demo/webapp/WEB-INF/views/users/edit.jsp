@@ -2,7 +2,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://www.springframework.org/tags" prefix="s"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
-<%@taglib prefix="z" uri="/WEB-INF/zzzhc.tld"%>
+<%@taglib prefix="z" uri="http://taglib.enilu.cn"%>
 <z:breadcrumb breadcrumb="${breadcrumb}"/>
 
 <form:form action="/users/${user.id}" method="POST" validate="true"

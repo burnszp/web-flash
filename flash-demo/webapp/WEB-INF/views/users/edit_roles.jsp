@@ -2,8 +2,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <%@ taglib uri="http://displaytag.sf.net" prefix="display" %>
-
-<%@taglib prefix="z" uri="http://taglib.enilu.com" %>
+<%@taglib prefix="z" uri="http://taglib.enilu.cn"%>
 <z:breadcrumb breadcrumb="${breadcrumb}"/>
 
 <div class="row-fluid">
