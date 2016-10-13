@@ -51,6 +51,10 @@ public class Breadcrumb {
 		items.add(new Item(name, link));
 		return this;
 	}
+	public Breadcrumb add(int index,String name, String link) {
+		items.add(index,new Item(name, link));
+		return this;
+	}
 
 	public void clear() {
 		items.clear();
