@@ -47,7 +47,7 @@ public class BeansTest {
 		result = Beans.copy(user, User.class, "password", "name");
 		assertNotEquals(user, result);
 		assertNull(result.getName());
-        assertNull(result.getPassword());
+		assertNull(result.getPassword());
 	}
 
 	@Test
@@ -63,11 +63,16 @@ public class BeansTest {
 		assertEquals(user.getName(), user1.getName());
 		assertEquals(user.getPassword(), user1.getPassword());
 		assertEquals(user.getAvatar(), user1.getAvatar());
-		
+
 		user1 = new User();
 		user1.setName("abc");
 		user.setName(null);
 		Beans.extend(user1, user, true);
 		assertEquals("abc", user1.getName());
+
 	}
+
+
+
+
 }

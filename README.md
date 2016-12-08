@@ -1,7 +1,7 @@
 # web-flash
 **基于springmvc的快速开发脚手架**
 
-==============
+=======****=======
 
 
 ## 目录结构
@@ -13,6 +13,3 @@
 ## 框架使用示例：
 
 - flash-demo [https://github.com/enilu/flash-demo](https://github.com/enilu/flash-demo)
-   
-
-    

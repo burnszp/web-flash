@@ -1,11 +1,13 @@
 package cn.enilu.flash.core.db;
 
-import cn.enilu.flash.core.db.mysql.MySQLSQLBuilder;
-import cn.enilu.flash.core.db.sqlite.SQLiteSQLBuilder;
-import cn.enilu.flash.core.lang.Lists;
-import cn.enilu.flash.core.lang.Maps;
-import com.google.common.base.Joiner;
-import com.google.common.base.Strings;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Date;
+import java.util.List;
+import java.util.Map;
+
+import javax.sql.DataSource;
+
 import org.joda.time.DateTime;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
@@ -14,8 +16,13 @@ import org.springframework.transaction.TransactionDefinition;
 import org.springframework.transaction.TransactionStatus;
 import org.springframework.transaction.support.DefaultTransactionDefinition;
 
-import javax.sql.DataSource;
-import java.util.*;
+import com.google.common.base.Joiner;
+import com.google.common.base.Strings;
+
+import cn.enilu.flash.core.db.mysql.MySQLSQLBuilder;
+import cn.enilu.flash.core.db.sqlite.SQLiteSQLBuilder;
+import cn.enilu.flash.core.lang.Lists;
+import cn.enilu.flash.core.lang.Maps;
 
 public final class DB {
     public static enum Type {
@@ -254,7 +261,7 @@ public final class DB {
         return getSQLExecutor(tableName, entity).update(entity, properties);
     }
 
-    /**
+    /** 
      * 更新数据库记录为指定值，只能更新一列。
      *
      * @param table           表名

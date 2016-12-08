@@ -7,7 +7,10 @@
     <groupId>cn.enilu</groupId>
     <artifactId>webflash</artifactId>
     <packaging>pom</packaging>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
+    <description>基于springmvc的快速开发脚手架 </description>
+    <url>https://github.com/enilu/web-flash</url>
+
     <modules>
         <module>flash-core</module>
         <module>flash-web</module>
@@ -28,6 +31,26 @@
 
         <jetty-version>9.2.5.v20141112</jetty-version>
     </properties>
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+    <developers>
+        <developer>
+            <id>enilu</id>
+            <name>enilu</name>
+            <email>eniluzt@qq.com</email>
+            <url>http://www.enilu.cn</url>
+        </developer>
+    </developers>
+    <scm>
+        <connection>scm:git:git@github.com:enilu/web-flash.git</connection>
+        <developerConnection>scm:git:git@github.com:enilu/web-flash.git</developerConnection>
+        <url>git@github.com:enilu/web-flash.git</url>
+        <tag>web-flash-1.0</tag>
+    </scm>
     <dependencyManagement>
         <dependencies>
             <!-- 直接依赖aop/beans/core, 避免被其他包间接引用到引起版本冲突 -->
@@ -292,11 +315,6 @@
                 <artifactId>flash-web</artifactId>
                 <version>${project.version}</version>
             </dependency>
-            <!--<dependency>-->
-                <!--<groupId>cn.enilu</groupId>-->
-                <!--<artifactId>base-code-generator</artifactId>-->
-                <!--<version>${project.version}</version>-->
-            <!--</dependency>-->
         </dependencies>
     </dependencyManagement>
 
@@ -337,4 +355,18 @@
             </plugin>
         </plugins>
     </build>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>nexus-snapshots</id>
+            <name>Sonatype Nexus snapshot repository</name>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+
+        <repository>
+            <id>nexus-releases</id>
+            <name>Sonatype Nexus release repository</name>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+        </repository>
+    </distributionManagement>
 </project>
