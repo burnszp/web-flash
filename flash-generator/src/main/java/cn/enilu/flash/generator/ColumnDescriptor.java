@@ -1,4 +1,4 @@
-package cn.enilu.flash.code;
+package cn.enilu.flash.generator;
 
 import com.google.common.base.CaseFormat;
 import com.google.common.base.Joiner;

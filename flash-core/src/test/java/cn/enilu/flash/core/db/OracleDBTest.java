@@ -13,34 +13,52 @@ import org.slf4j.LoggerFactory;
 import javax.persistence.Table;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
-public class MySQLDBTest extends DBTestBase {
+public class OracleDBTest extends DBTestBase {
 
-    Logger logger = LoggerFactory.getLogger(MySQLDBTest.class);
-	private static String url = "jdbc:mysql://localhost:3306/flash_test?useUnicode=true&characterEncoding=UTF-8";
+    Logger logger = LoggerFactory.getLogger(OracleDBTest.class);
+
+	private static String url = "jdbc:oracle:thin:@//localhost:1521/xe";
 	private static Context context;
 
 	@BeforeClass
 	public static void setUp() throws Exception {
+
 		BasicDataSource dataSource = new BasicDataSource();
-		dataSource.setDriverClassName("com.mysql.jdbc.Driver");
-		dataSource.setUsername("root");
-		dataSource.setPassword("root");
+		dataSource.setDriverClassName("oracle.jdbc.driver.OracleDriver");
+		dataSource.setUsername("enilu");
+		dataSource.setPassword("enilu");
 		dataSource.setUrl(url);
-		DB db = new DB(dataSource, DB.Type.MySQL);
+		DB db = new DB(dataSource, DB.Type.Oracle);
 
 		context = new Context();
 		context.db = db;
 		context.dataSource = dataSource;
-
-		executeSql(dataSource, "drop table if exists sample");
+		executeSql(dataSource,"drop table sample");
 		executeSql(dataSource,
-				"create table sample(id bigint auto_increment primary key, a varchar(200)," +
-                        " phone1 varchar(30), phone_2 varchar(30)," +
-                        " money decimal(14,2), created_at datetime NOT NULL, updated_at datetime NOT NULL)");
+				"create table sample(id int, a varchar2(200)," +
+						" phone1 varchar2(30), phone_2 varchar2(30)," +
+						" money number(14,2), created_at date NOT NULL, updated_at date NOT NULL)");
+//		executeSql(dataSource,"drop sequence sample_seq");
+//		executeSql(dataSource,"create sequence seq_sample\n" +
+//				"\t\tincrement by 1\n" +
+//				"\t\tstart with 1\n" +
+//				"\t\tnomaxvalue\n" +
+//				"\t\tnominvalue\n" +
+//				"\t\tnocache");
+//
+//		executeSql(dataSource,"create or replace trigger tr_sample\n" +
+//				"\t\tbefore insert on sample\n" +
+//				"\t\tfor each row\n" +
+//				"\t\tbegin\n" +
+//				"\t\t\t\tselect seq_sample.nextval into :new.id from dual;\n" +
+//				"\t\tend");
+
+
 	}
 
 	@Test

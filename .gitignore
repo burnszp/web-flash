@@ -2,3 +2,6 @@
 /src/
 /.idea/
 *.iml
+.project
+.classpath
+.settings/

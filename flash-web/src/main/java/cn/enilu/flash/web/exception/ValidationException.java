@@ -35,7 +35,7 @@ public class ValidationException extends ApplicationException {
     public Map<String, Object> toJson(MessageSource messageSource) {
         Map<String, Object> json = new HashMap<>();
         json.put("success", false);
-        json.put("code", ErrorCode.VALIDATION_ERROR.code);
+        json.put("generator", ErrorCode.VALIDATION_ERROR.code);
         
         String defaultMessage = null;
         

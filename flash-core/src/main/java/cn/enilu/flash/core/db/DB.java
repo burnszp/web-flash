@@ -8,6 +8,7 @@ import java.util.Map;
 
 import javax.sql.DataSource;
 
+import cn.enilu.flash.core.db.oracle.OracleSQLBuilder;
 import org.joda.time.DateTime;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
@@ -28,7 +29,9 @@ public final class DB {
     public static enum Type {
         MySQL(MySQLSQLBuilder.class),
 
-        SQLITE(SQLiteSQLBuilder.class);
+        SQLITE(SQLiteSQLBuilder.class),
+
+        Oracle(OracleSQLBuilder.class);
 
         private Type(Class<? extends ISQLBuilder> klass) {
             this.klass = klass;

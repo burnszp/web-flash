@@ -7,8 +7,10 @@
     <groupId>cn.enilu</groupId>
     <artifactId>webflash</artifactId>
     <packaging>pom</packaging>
+
+    <name>web-flash</name>
     <version>1.0</version>
-    <description>基于springmvc的快速开发脚手架 </description>
+    <description>Java Web development framework based on Spring MVC</description>
     <url>https://github.com/enilu/web-flash</url>
 
     <modules>
@@ -26,6 +28,7 @@
         <ch.qos.logback-version>1.1.2</ch.qos.logback-version>
         <com.google.guava-version>18.0</com.google.guava-version>
         <mysql-connector-version>5.1.23</mysql-connector-version>
+        <oracle-jdbc-version>11.2.0.1.0</oracle-jdbc-version>
         <jackson-version>2.4.3</jackson-version>
         <slf4j-version>1.7.7</slf4j-version>
 
@@ -157,6 +160,11 @@
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
                 <version>${mysql-connector-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.oracle</groupId>
+                <artifactId>ojdbc6</artifactId>
+                <version>${oracle-jdbc-version}</version>
             </dependency>
             <dependency>
                 <groupId>org.xerial</groupId>

@@ -1,4 +1,4 @@
-package cn.enilu.flash.code;
+package cn.enilu.flash.generator;
 
 import com.google.common.base.CaseFormat;
 import com.google.common.base.Charsets;
@@ -151,7 +151,7 @@ public class Generator {
 					generateViews(force, table, generator);
 				} else {
 					String packageName = basePackageName + "." + type;
-					String templatePath = "com/zzzhc/base/code/" + type + ".vm";
+					String templatePath = "com/zzzhc/base/generator/" + type + ".vm";
 
 					String packagePath = packageName.replace('.', '/');
 					String className = table.getEntityClassName();
@@ -183,7 +183,7 @@ public class Generator {
 	private static void generateViews(boolean force, TableDescriptor table,
 									  Generator generator) throws IOException {
 		for (String view : new String[] { "index", "new", "edit", "show" }) {
-			String templatePath = "com/zzzhc/base/code/view/" + view + ".jsp.vm";
+			String templatePath = "com/zzzhc/base/generator/view/" + view + ".jsp.vm";
 			File file = new File("src/main/webapp/WEB-INF/views"
 					+ table.getUriPrefix() + "/" + view
 					+ ".jsp");

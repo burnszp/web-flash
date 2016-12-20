@@ -1,15 +1,15 @@
 # web-flash
-**基于springmvc的快速开发脚手架**
+**Java Web development framework based on Spring MVC**
 
 =======****=======
 
 
-## 目录结构
+## Tables
 
-- flash-core:基础框架，封装了常用工具类和数据库操作DB类
-- flash-web: web层框架，内嵌jetty，依赖flash-core
-- flash-generator:代码生成器，可以根据数据库生成entity,service,controller,view层，也可以根据entity生成service,controller,view
+- flash-core:base component, with utils,database utils
+- flash-web: the web component ,Jetty is embedded in this,depends onflash-core
+- flash-generator: the code generator,it can generate entity,service,controller,view by table Structure.
    
-## 框架使用示例：
+## demo：
 
 - flash-demo [https://github.com/enilu/flash-demo](https://github.com/enilu/flash-demo)
