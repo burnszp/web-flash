@@ -7,12 +7,12 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.zzzhc.base.db.DB;
-import com.zzzhc.base.db.Pagination;
-import com.zzzhc.base.db.Query;
-import com.zzzhc.base.service.EntityService;
+import cn.enilu.flash.core.db.Pagination;
+import cn.enilu.flash.core.db.Query;
+import cn.enilu.flash.core.service.EntityService;
+import cn.enilu.flash.web.QueryForm;
 import ${table.EntityFullClassName};
-import com.zzzhc.base.web.QueryForm;
+
 
 @Service
 public class ${table.ServiceClassName} extends EntityService<${table.EntityClassName}, ${table.PrimaryType}> {

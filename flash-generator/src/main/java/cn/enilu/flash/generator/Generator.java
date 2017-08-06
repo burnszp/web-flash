@@ -65,7 +65,7 @@ public class Generator {
         String configPath = "/base.xml";
 		Pattern includePattern = Pattern.compile(".*");
 		Pattern excludePattern = null;
-		String basePackageName = "com.zzzhc";
+		String basePackageName = "cn.enilu";
 		String outputDir = "src/main/java";
 		boolean force = false;
 		String baseUri = "/";
@@ -151,7 +151,7 @@ public class Generator {
 					generateViews(force, table, generator);
 				} else {
 					String packageName = basePackageName + "." + type;
-					String templatePath = "com/zzzhc/base/generator/" + type + ".vm";
+					String templatePath = "code/" + type + ".vm";
 
 					String packagePath = packageName.replace('.', '/');
 					String className = table.getEntityClassName();
@@ -183,7 +183,7 @@ public class Generator {
 	private static void generateViews(boolean force, TableDescriptor table,
 									  Generator generator) throws IOException {
 		for (String view : new String[] { "index", "new", "edit", "show" }) {
-			String templatePath = "com/zzzhc/base/generator/view/" + view + ".jsp.vm";
+			String templatePath = "code/view/" + view + ".jsp.vm";
 			File file = new File("src/main/webapp/WEB-INF/views"
 					+ table.getUriPrefix() + "/" + view
 					+ ".jsp");

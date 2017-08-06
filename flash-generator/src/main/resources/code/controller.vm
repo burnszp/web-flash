@@ -14,12 +14,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.zzzhc.base.db.Pagination;
-import com.zzzhc.base.lang.Beans;
+import cn.enilu.flash.common.controller.BaseController;
+import cn.enilu.flash.core.db.Pagination;
+import cn.enilu.flash.core.lang.Beans;
+import cn.enilu.flash.core.util.JsonResponse;
 import ${table.EntityFullClassName};
 import ${table.ServiceFullClassName};
-import com.zzzhc.base.util.JsonResponse;
-import com.zzzhc.base.web.BaseController;
+
 
 @Controller
 @RequestMapping("${table.UriPrefix}")
