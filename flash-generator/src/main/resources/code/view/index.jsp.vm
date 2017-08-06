@@ -39,4 +39,4 @@
 </display:table>
 <z:pagination name="${table.EntityInstancesName}" />
 
-<jsp:include page="/WEB-INF/views${table.BaseUri}layouts/footer.jsp"/>
+<jsp:include page="/WEB-INF/views/layouts/footer.jsp"/>
